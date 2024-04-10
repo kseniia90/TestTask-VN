@@ -49,7 +49,7 @@
                         <a href="./cart.html">
                             <img src="./img/cart-simple.svg" alt="cart-icon">
                             <div class="header__counter shopping_cart__counter">
-                                <span class="header__counter__value shopping_cart__counter__value">2</span>
+                                <span class="header__counter__value shopping_cart__counter__value" id="count">0</span>
                             </div>
                         </a>
                     </div>
@@ -126,11 +126,13 @@
                                     <span class="price-value">3439</span>
                                 </p>
                             </div>
-                            <div class="product-item__btn" ><a href="#" class="custom-button">ক্রয় করুন</a></div>
+                            <div class="product-item__btn" >
+                                <button class="custom-button add-to-cart" data-id="1" data-img="/img/product_1.jpg" data-price="3439" data-title="দিগন্তীয় সামগ্রী">ক্রয় করুন</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-item">
-                        <img src="./img/product_2.jpg" alt="img" width="294" height="300"> 
+                        <img src="./img/product_2.jpg" alt="img" width="294" height="300">
                         <div class="product-item__content">
                             <h3>দিগন্তীয় সামগ্রী</h3>
                             <div class="product-item__price">
@@ -140,7 +142,10 @@
                                     <span class="price-value">3439</span>
                                 </p>
                             </div>
-                            <div class="product-item__btn" ><a href="#" class="custom-button">ক্রয় করুন</a></div>
+                            <div class="product-item__btn">
+                                <button class="custom-button add-to-cart" data-id="2" data-img="./img/product_2.jpg" data-price="3439"
+                                    data-title="দিগন্তীয় সামগ্রী">ক্রয় করুন</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-item">
@@ -154,7 +159,10 @@
                                     <span class="price-value">3439</span>
                                 </p>
                             </div>
-                            <div class="product-item__btn" ><a href="#" class="custom-button">ক্রয় করুন</a></div>
+                            <div class="product-item__btn">
+                                <button class="custom-button add-to-cart" data-id="3" data-img="./img/product_3.jpg" data-price="3439"
+                                    data-title="দিগন্তীয় সামগ্রী">ক্রয় করুন</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-item">
@@ -168,7 +176,10 @@
                                     <span class="price-value">4531</span>
                                 </p>
                             </div>
-                            <div class="product-item__btn" ><a href="#" class="custom-button">ক্রয় করুন</a></div>
+                            <div class="product-item__btn">
+                                <button class="custom-button add-to-cart" data-id="4" data-img="./img/product_4.jpg" data-price="4531"
+                                    data-title="মাপযুক্ত যুদ্ধের নায়কের ইতিহাস">ক্রয় করুন</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-item">
@@ -182,7 +193,10 @@
                                     <span class="price-value">2499</span>
                                 </p>
                             </div>
-                            <div class="product-item__btn" ><a href="#" class="custom-button">ক্রয় করুন</a></div>
+                            <div class="product-item__btn">
+                                <button class="custom-button add-to-cart" data-id="5" data-img="./img/product_5.jpg" data-price="2499"
+                                    data-title="তারকার জেলেবারের প্রশ্ন">ক্রয় করুন</button>
+                            </div>
                         </div>
                     </div>
                     <div class="product-item">
@@ -196,7 +210,10 @@
                                     <span class="price-value">7429</span>
                                 </p>
                             </div>
-                            <div class="product-item__btn" ><a href="#" class="custom-button">ক্রয় করুন</a></div>
+                            <div class="product-item__btn">
+                                <button class="custom-button add-to-cart" data-id="6" data-img="./img/product_6.jpg" data-price="7429"
+                                    data-title="যাদুকর বিশ্বের পৌরাণিক কাহিনী">ক্রয় করুন</button>
+                            </div>
                         </div>
                     </div>
             
@@ -299,7 +316,6 @@
         </footer>
     </div>
     <script src="./lib/jquery.min.js"></script>
-    <script src="./lib/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

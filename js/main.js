@@ -8,29 +8,54 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// shopping cart counter on click
 
-$(document).ready(function () {
-  $(".minus").click(function () {
-    var $input = $(this).parent().find("input");
-    var count = parseInt($input.val()) - 1;
-    count = count < 1 ? 1 : count;
-    $input.val(count);
-    $input.change();
-    return false;
-  });
-  $(".plus").click(function () {
-    var $input = $(this).parent().find("input");
-    $input.val(parseInt($input.val()) + 1);
-    $input.change();
-    return false;
-  });
 
-  // show all products on mobile
-  $(".products-show-more").on("click", function () {
-    $(".products__result__item").toggleClass("showContent");
-});
-});
+let cart = {};
+
+if (localStorage.getItem("cart")) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+}
+
+updateCart();
+
+let btns = document.querySelectorAll(".add-to-cart");
+
+for (let i = 0; i < btns.length; i++) {
+    let btn = btns[i];
+    btn.addEventListener("click", add);
+}
+
+function add(event) {
+    let price = Number(event.target.dataset.price);
+    let img =  event.target.dataset.img;
+    let title = event.target.dataset.title;
+    let id = event.target.dataset.id;
+
+if (id in cart) {
+    cart[id].qty++;
+} else {
+    let cartItem = {
+        title: title,
+        img: img,
+        price: price,
+        qty: 1
+    };
+    cart[id] = cartItem
+}
+    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCart();
+}
+
+function updateCart() {
+  let count = 0,
+    cart = {};
+  if (localStorage.getItem("cart")) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    count = Object.keys(cart).length;
+  }
+  document.getElementById("count").textContent = count;
+}
 
 
 

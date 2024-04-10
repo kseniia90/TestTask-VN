@@ -356,6 +356,7 @@ main {
 	line-height: 24.38px;
 	text-align: center;
 	color: #FFFFFF;
+	border: none;
 	background: var(--main-green);
 	transition: transform 0.3s ease;
 }

@@ -50,7 +50,7 @@
                         <a href="./cart.html">
                             <img src="./img/cart-simple.svg" alt="cart-icon">
                             <div class="header__counter shopping_cart__counter">
-                                <span class="header__counter__value shopping_cart__counter__value">2</span>
+                                <span class="header__counter__value shopping_cart__counter__value" id="count">0</span>
                             </div>
                         </a>
                     </div>
@@ -63,7 +63,7 @@
             <section class="text-block">
                 <div class="cart container">
                     <h2 class="title">আপনার অর্ডার করা বিষয়।</h2>
-                    <p>আপনার কার্টে <span class="item-count">2</span> আইটেম।</p>
+                    <p>আপনার কার্টে <span class="item-count">0</span> আইটেম।</p>
                     <div class="shopping-cart__table">
                         <div class="shopping-cart__table__head">
                             <div class="shopping-cart__table__row table__head">
@@ -74,64 +74,10 @@
                                 <div class="shopping-cart__col shopping-cart__delete"></div>
                             </div>
                         </div>
-                        <div class="shopping-cart__table__body">
-                
-                            <div class="shopping-cart__table__row">
-                                <div class="shopping-cart__col shopping-cart__name">
-                                    <div class="shopping-cart__name-product">
-                                        <div class="product-image">
-                                            <img src="./img/product_1.jpg" alt="product img">
-                                        </div>
-                                        <a href="#">দিগন্তীয় সামগ্রী</a>
-                                    </div>
-                                    <span class="btn-remove cart_item">×</span>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__price" data-th="মূল্য">
-                                    <span class="price">BDT 3439</span>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__quantity" data-th="পরিমাণ">
-                                    <div class="shopping_cart__counter">
-                                        <span class="minus">-</span>
-                                        <input type="number" name="product_quantity" value="1" min="1" max="3">
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__total" data-th="মোট">
-                                    <span class="total-price">BDT 3439</span>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__delete">
-                                    <span class="btn-remove cart_item">×</span>
-                                </div>
-                            </div>
-                            <div class="shopping-cart__table__row">
-                                <div class="shopping-cart__col shopping-cart__name">
-                                    <div class="shopping-cart__name-product">
-                                        <div class="product-image">
-                                            <img src="./img/product_1.jpg" alt="product img">
-                                        </div>
-                                        <a href="#">দিগন্তীয় সামগ্রী</a>
-                                    </div>
-                                    <span class="btn-remove cart_item">×</span>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__price" data-th="মূল্য">
-                                    <span class="price">BDT 3439</span>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__quantity" data-th="পরিমাণ">
-                                    <div class="shopping_cart__counter">
-                                        <span class="minus">-</span>
-                                        <input type="number" name="product_quantity" value="1" min="1" max="3">
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__total" data-th="মোট">
-                                    <span class="total-price">BDT 3439</span>
-                                </div>
-                                <div class="shopping-cart__col shopping-cart__delete">
-                                    <span class="btn-remove cart_item">×</span>
-                                </div>
-                            </div>
+                        <div class="shopping-cart__table__body" id="tbody">
+                           
                         </div>
-                        <div class="shopping-cart__table__footer">
+                        <!-- <div class="shopping-cart__table__footer">
                             <div class="shopping-cart__table__row">
                                 <div class="shopping-cart__col shopping-cart__name"></div>
                                 <div class="shopping-cart__col shopping-cart__price"></div>
@@ -141,7 +87,7 @@
                                 </div>
                                 <div class="shopping-cart__col shopping-cart__delete"></div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="shopping-cart__buttons">
                         <div><a href="./index.html#shop-block" class="custom-button">কেনাকাটা চালিয়ে যান</a></div>
@@ -191,8 +137,8 @@
         </footer>
     </div>
     <script src="./lib/jquery.min.js"></script>
-    <script src="./lib/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 
 </html>
